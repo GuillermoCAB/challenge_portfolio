@@ -1,5 +1,7 @@
 export const white = "#FFFFFF";
 export const black = "#030303";
+export const ligthBlack = "#131313";
+
 export const blue = "#00D1FF";
 export const yellow = "#DBFF00";
 export const green = "#00FFB2";

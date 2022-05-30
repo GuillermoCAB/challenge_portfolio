@@ -3,7 +3,7 @@ import React from "react";
 // COMPONENTS
 import SEO from "../components/Seo";
 import Header from "../components/Header";
-import { MainWrapper } from "../styles/index/styles";
+import { MainWrapper } from "../styles/main";
 
 function BasicLayout({ children, title, description, ...props }) {
   return (

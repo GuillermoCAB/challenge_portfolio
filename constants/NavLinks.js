@@ -1,23 +1,15 @@
 const navLinks = [
   {
-    name: "Início",
-    link: "/#start",
-  },
-  {
-    name: "Sobre nós",
-    link: "/#aboutUs",
+    name: "About Me",
+    link: "#aboutMe",
   },
   {
     name: "Tecnologia",
-    link: "/#techs",
+    link: "#techs",
   },
   {
-    name: "Portfólio",
-    link: "/#portfolio",
-  },
-  {
-    name: "Contato",
-    link: "/#contact",
+    name: "Make It Happen",
+    link: "#howTo",
   },
 ];
 

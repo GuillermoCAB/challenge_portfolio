@@ -1,9 +1,17 @@
 import styled from "styled-components";
-import { white, black } from "../colors";
 
-export const MainWrapper = styled.div`
-  width: 100%;
-  height: 100%;
+export const ImageHolder = styled.div`
+  position: absolute;
+  width: 1901.44px;
+  height: 1732.42px;
 
-  background-color: ${black};
+  top: -139px;
+  right: -453px;
+
+  @media only screen and (max-width: 1023px) {
+    top: 228px;
+    right: -340px;
+    width: 893.98px;
+    height: 814.51px;
+  }
 `;

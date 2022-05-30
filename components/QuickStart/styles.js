@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { black, blue, yellow } from "../../styles/colors";
+import { black, blue, white, yellow } from "../../styles/colors";
 
 export const Container = styled.div`
   width: 28%;
-  height: ${(p) => (p.isOpen ? "100%" : "119px")};
+  height: ${(p) => (p.isOpen ? "100vh" : "119px")};
 
   display: flex;
   flex-direction: column;
@@ -25,6 +25,10 @@ export const Container = styled.div`
   font-size: 18px;
   line-height: 27px;
 
+  transition: all ease 0.3s;
+
+  z-index: 2;
+
   &:hover {
     cursor: ${(p) => (p.isOpen ? "default" : "pointer")};
   }
@@ -44,7 +48,7 @@ export const Container = styled.div`
   }
 
   section {
-    width: ${(p) => (p.isOpen && p.step < 5 ? "100%" : "0")};
+    width: ${(p) => (p.isOpen && p.step < 3 ? "100%" : "0")};
     height: 100%;
 
     background-color: ${yellow};
@@ -66,8 +70,78 @@ export const Container = styled.div`
     }
 
     section {
-      width: ${(p) => (p.step < 5 ? "100%" : "0")};
+      width: ${(p) => (p.step < 3 ? "100%" : "0")};
     }
+  }
+
+  @media only screen and (max-width: 1023px) {
+    width: 100%;
+    height: 76px;
+
+    position: unset;
+
+    align-items: center;
+
+    section {
+      width: 100%;
+      height: ${(p) => (p.isOpen ? "100vh" : "0")};
+
+      position: absolute;
+      top: -119px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 22px;
+
+      color: ${black};
+    }
+
+    span {
+      font-size: 13px;
+      line-height: 22px;
+
+      color: ${black};
+    }
+
+    svg {
+      transform: scale(0.8);
+    }
+
+    &:hover {
+      section {
+        width: 100%;
+      }
+      p {
+        display: block;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+`;
+
+export const FormWrapper = styled.div`
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  z-index: 1;
+
+  @media only screen and (max-width: 1023px) {
+    padding: 0 24px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: ${(p) => (p.isOpen ? "absolute" : "unset")};
+    top: -119px;
+
+    justify-content: center;
   }
 `;
 
@@ -78,6 +152,11 @@ export const Row = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media only screen and (max-width: 1023px) {
+    min-height: 76px;
+    justify-content: center;
+  }
 `;
 
 export const ExitBtn = styled.button`
@@ -90,6 +169,14 @@ export const ExitBtn = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    svg {
+      transform: scale(0.8);
+
+      margin: 3px 0 0;
+    }
   }
 `;
 
@@ -111,8 +198,7 @@ export const Step = styled.div`
   width: calc(100% / 5 - 12px);
   height: 5px;
 
-  background-color: ${(p) =>
-    p.isFilled ? "#000000" : "rgba(0, 0, 0, 0.13)"}; ;
+  background-color: ${(p) => (p.isFilled ? white : "rgba(0, 0, 0, 0.13)")}; ;
 `;
 
 export const Question = styled.h3`
@@ -127,7 +213,12 @@ export const Question = styled.h3`
   font-size: 32px;
   line-height: 48px;
 
-  color: #000000;
+  color: ${white};
+
+  @media only screen and (max-width: 1300px) {
+    font-size: 26px;
+    line-height: 34px;
+  }
 `;
 
 export const Helper = styled.h4`
@@ -140,7 +231,7 @@ export const Helper = styled.h4`
   font-size: 16px;
   line-height: 24px;
 
-  color: #000000;
+  color: ${white};
 `;
 
 export const Input = styled.input`
@@ -156,17 +247,17 @@ export const Input = styled.input`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 28px;
   line-height: 60px;
 
-  color: #000000;
+  color: ${white};
   outline: none;
 `;
 
 export const Button = styled.button`
   z-index: 1;
 
-  margin: ${(p) => (p.step < 5 ? "0 0 20px" : "auto 0 20px")};
+  margin: ${(p) => (p.step < 3 ? "0 0 20px" : "auto 0 20px")};
 
   width: 100%;
   height: 72px;
@@ -176,7 +267,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
 
-  background-color: #000000;
+  background-color: ${white};
   opacity: ${(p) => (p.isDisabled ? "0.5" : "1")};
 
   font-family: "Poppins";
@@ -184,5 +275,5 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 18.3556px;
   line-height: 28px;
-  color: #ffffff;
+  color: ${white};
 `;

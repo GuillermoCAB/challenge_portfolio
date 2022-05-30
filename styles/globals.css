@@ -133,14 +133,19 @@
   src: url("../public/fonts/poppins/Poppins-BlackItalic.ttf");
 }
 
+/** Cookie Regular */
+@font-face {
+  font-family: "Cookie";
+  font-weight: 400;
+  src: url("../public/fonts/cookie/Cookie-Regular.ttf");
+}
+
 
 html,
 body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 #__next {
@@ -156,6 +161,7 @@ a {
   font-family: 'Poppins';
   box-sizing: border-box;
   border: none;
+  scroll-behavior: smooth;
 }
 
 button {

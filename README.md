@@ -1,3 +1,5 @@
+This web app was done using Next.js, the original documentation is below. To run the app just follow the original doc. I've decided to create a simple website to show some of my skills.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
