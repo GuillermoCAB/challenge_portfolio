@@ -198,7 +198,7 @@ export const Step = styled.div`
   width: calc(100% / 5 - 12px);
   height: 5px;
 
-  background-color: ${(p) => (p.isFilled ? white : "rgba(0, 0, 0, 0.13)")}; ;
+  background-color: ${(p) => (p.isFilled ? black : "rgba(0, 0, 0, 0.13)")}; ;
 `;
 
 export const Question = styled.h3`
@@ -213,7 +213,7 @@ export const Question = styled.h3`
   font-size: 32px;
   line-height: 48px;
 
-  color: ${white};
+  color: ${black};
 
   @media only screen and (max-width: 1300px) {
     font-size: 26px;
@@ -250,7 +250,7 @@ export const Input = styled.input`
   font-size: 28px;
   line-height: 60px;
 
-  color: ${white};
+  color: ${black};
   outline: none;
 `;
 
@@ -267,7 +267,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
 
-  background-color: ${white};
+  background-color: ${black};
   opacity: ${(p) => (p.isDisabled ? "0.5" : "1")};
 
   font-family: "Poppins";
